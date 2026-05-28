@@ -1,0 +1,11 @@
+.vercel/
+.playwright-mcp/
+node_modules/
+dist/
+build/
+
+# Arquivos de origem e entrega local que nao fazem parte do deploy.
+Fotos Site Berbel Cursos/
+*.zip
+qa-*.png
+qa-*.json
