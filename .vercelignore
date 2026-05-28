@@ -1,0 +1,13 @@
+.git/
+.vercel/
+.playwright-mcp/
+node_modules/
+dist/
+build/
+
+# Arquivos locais que nao devem ir para a Vercel.
+Fotos Site Berbel Cursos/
+site-berbel-centro-formacao.zip
+*.zip
+qa-*.png
+qa-*.json
