@@ -274,6 +274,8 @@ svg {
 
 .hero-brand-panel {
   width: fit-content;
+  display: grid;
+  place-items: center;
 }
 
 .hero-text-panel {
@@ -283,14 +285,15 @@ svg {
 }
 
 .hero-crest {
-  width: 112px;
-  height: 112px;
+  width: 140px;
+  height: auto;
   object-fit: contain;
-  border: 1px solid rgba(0, 47, 103, 0.12);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.9);
-  padding: 12px;
-  box-shadow: 0 22px 54px rgba(0, 47, 103, 0.16);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  filter: drop-shadow(0 24px 38px rgba(0, 47, 103, 0.2));
 }
 
 .institution,
@@ -1058,9 +1061,7 @@ svg {
   }
 
   .hero-crest {
-    width: 132px;
-    height: 132px;
-    padding: 14px;
+    width: 190px;
   }
 
   .hero h1 {
@@ -1145,8 +1146,8 @@ svg {
   }
 
   .hero-content {
-    grid-template-columns: minmax(160px, 220px) minmax(0, 1fr);
-    gap: 58px;
+    grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
+    gap: 42px;
   }
 
   .hero-brand-panel {
@@ -1154,17 +1155,19 @@ svg {
   }
 
   .hero-crest {
-    width: 188px;
-    height: 188px;
-    padding: 20px;
+    width: clamp(270px, 28vw, 320px);
   }
 
   .hero h1 {
-    font-size: 68px;
+    font-size: 58px;
   }
 
   .hero-copy {
     font-size: 21px;
+  }
+
+  .hero-actions {
+    width: min(100%, 560px);
   }
 
   .section-grid {
@@ -1217,6 +1220,21 @@ svg {
   }
 }
 
+@media (min-width: 1180px) {
+  .hero-content {
+    grid-template-columns: minmax(360px, 440px) minmax(0, 1fr);
+    gap: 54px;
+  }
+
+  .hero-crest {
+    width: clamp(380px, 30vw, 470px);
+  }
+
+  .hero h1 {
+    font-size: 68px;
+  }
+}
+
 @media (max-width: 520px) {
   .hero {
     min-height: 94svh;
@@ -1228,9 +1246,7 @@ svg {
   }
 
   .hero-crest {
-    width: 104px;
-    height: 104px;
-    padding: 10px;
+    width: 132px;
   }
 
   .hero h1 {
