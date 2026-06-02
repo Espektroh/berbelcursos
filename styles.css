@@ -253,33 +253,44 @@ svg {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: saturate(0.9) contrast(1.05) brightness(1.06);
+  filter: saturate(0.98) contrast(1.05) brightness(0.98);
   transform: scale(1.01);
 }
 
 .hero-overlay {
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.99) 0%, rgba(255, 255, 255, 0.94) 44%, rgba(255, 255, 255, 0.62) 100%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.98));
+    linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.82) 44%, rgba(255, 255, 255, 0.34) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.84));
 }
 
 .hero-content {
   width: min(100%, var(--max));
   margin: 0 auto;
   display: grid;
+  gap: 22px;
+  align-items: center;
+}
+
+.hero-brand-panel {
+  width: fit-content;
+}
+
+.hero-text-panel {
+  display: grid;
   gap: 18px;
+  max-width: 790px;
 }
 
 .hero-crest {
-  width: 88px;
-  height: 88px;
+  width: 112px;
+  height: 112px;
   object-fit: contain;
   border: 1px solid rgba(0, 47, 103, 0.12);
   border-radius: var(--radius);
-  background: var(--white);
-  padding: 8px;
-  box-shadow: 0 18px 48px rgba(0, 47, 103, 0.14);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 12px;
+  box-shadow: 0 22px 54px rgba(0, 47, 103, 0.16);
 }
 
 .institution,
@@ -1046,6 +1057,12 @@ svg {
     padding-inline: 28px;
   }
 
+  .hero-crest {
+    width: 132px;
+    height: 132px;
+    padding: 14px;
+  }
+
   .hero h1 {
     font-size: 56px;
   }
@@ -1121,8 +1138,29 @@ svg {
     padding-bottom: 54px;
   }
 
+  .hero-overlay {
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.76) 0%, rgba(255, 255, 255, 0.64) 44%, rgba(255, 255, 255, 0.16) 100%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.66));
+  }
+
+  .hero-content {
+    grid-template-columns: minmax(160px, 220px) minmax(0, 1fr);
+    gap: 58px;
+  }
+
+  .hero-brand-panel {
+    align-self: center;
+  }
+
+  .hero-crest {
+    width: 188px;
+    height: 188px;
+    padding: 20px;
+  }
+
   .hero h1 {
-    font-size: 72px;
+    font-size: 68px;
   }
 
   .hero-copy {
@@ -1183,6 +1221,16 @@ svg {
   .hero {
     min-height: 94svh;
     padding-bottom: 118px;
+  }
+
+  .hero-content {
+    gap: 18px;
+  }
+
+  .hero-crest {
+    width: 104px;
+    height: 104px;
+    padding: 10px;
   }
 
   .hero h1 {
